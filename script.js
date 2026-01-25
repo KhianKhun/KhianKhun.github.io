@@ -106,3 +106,25 @@ selfLink?.addEventListener("click", (e) => {
 
   history.replaceState(null, "", "#top");
 });
+
+
+// Back to top button
+const backToTopBtn = document.getElementById("backToTop");
+
+// 滚动时决定是否显示按钮
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.classList.add("show");
+  } else {
+    backToTopBtn.classList.remove("show");
+  }
+});
+
+// 点击后平滑回到顶部
+backToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
