@@ -75,3 +75,34 @@ form?.addEventListener("submit", (e) => {
   statusEl.textContent = "Looks good. (This demo only validates; it does not send.)";
   form.reset();
 });
+
+// --- Easter egg: self-link + toast ---
+const selfLink = document.getElementById("selfLink");
+const toast = document.getElementById("toast");
+
+const eggLines = [
+  "Recursion!",
+  "You are reading what you are reading!",
+  "Self-reference detected. Proceed carefully!",
+];
+
+let toastTimer = null;
+
+function showToast(message) {
+  if (!toast) return;
+  toast.textContent = message;
+  toast.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove("show"), 1600);
+}
+
+selfLink?.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
+  const msg = eggLines[Math.floor(Math.random() * eggLines.length)];
+  showToast(msg);
+
+  history.replaceState(null, "", "#top");
+});

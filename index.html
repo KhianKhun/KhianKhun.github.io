@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
@@ -40,7 +41,7 @@
           <p class="lead">
             I am a CMU undergraduate student, graduate at 2027. <br>
             I focus on Statistics and Machine Learning (major) and Computer Science (minor) <br>
-            My hobbies: Western and Eastern Astrology, Singing, Hiking
+            Hobby: Western and Eastern Astrology, Singing, Hiking, Zelda
           </p>
           <div class="hero-actions">
             <a class="button" href="#projects">View Projects</a>
@@ -92,6 +93,8 @@
               <li>Python</li>
               <li>C</li>
               <li>R</li>
+              <li>numpy</li>
+              <li>tensor</li>
               <li>SML</li>
               <li>Coding with AI</li>
               <li>System operation</li>
@@ -153,28 +156,49 @@
     <section id="projects" class="section">
       <div class="container">
         <h2>Projects</h2>
-        <p class="muted">
-          Start with placeholders. Include this portfolio project itself.
-        </p>
 
         <div class="grid">
           <!-- Project 1: This portfolio -->
           <article class="card project">
             <div class="project-media">
               <img
-                src="assets/project-placeholder.png"
+                src="assets/15113_project.png"
                 alt="Screenshot placeholder for portfolio project"
                 onerror="this.style.display='none'"
               />
             </div>
             <h3>Portfolio Website</h3>
             <p>
-              A responsive portfolio hosted on GitHub Pages. Includes navigation,
-              sections, and a theme toggle.
+              A responsive personal portfolio website built with HTML, CSS, and JavaScript.
+              The site is hosted on GitHub Pages and includes multiple sections such as
+              About, Coursework, and Projects. It also features basic interactivity,
+              including a theme toggle and small UI elements to improve user experience.
+
             </p>
             <div class="project-links">
-              <a class="link" href="#" target="_blank" rel="noreferrer">Live Site</a>
-              <a class="link" href="#" target="_blank" rel="noreferrer">Code</a>
+              <a class="link" href="#top" id="selfLink">Link</a>
+            </div>
+          </article>
+          
+          <!-- Project 2: Tank star for 15112 -->
+          <article class="card project">
+            <div class="project-media">
+              <img
+                src="assets/15112_project.png"
+                alt="Screenshot placeholder for tank stars"
+                onerror="this.style.display='none'"
+              />
+            </div>
+            <h3>Tank Stars</h3>
+            <p>
+              A game based on Python and CS Acadamy package provided by CMU 15112.
+              In this game, two players operate their tanks to defeat the opponent.
+              Player can define the color of there tank; terriance is random; 
+              and multiple types of shells are provided to increase the game fun.
+            </p>
+            <div class="project-links">
+              <a class="link" href="https://youtu.be/xzPOQm3OqUw" 
+              id="15112ProjectLink" rel="noreferrer">Video Link</a>
             </div>
           </article>
 
@@ -185,7 +209,7 @@
             <h3>More Projects Coming</h3>
             <p>
               I will continue adding course projects and personal work to this
-              portfolio throughout the semester.
+              portfolio in the future.
             </p>
             <div class="project-links">
               <span class="muted">In progress</span>
@@ -201,48 +225,17 @@
     <section id="contact" class="section">
       <div class="container">
         <h2>Contact</h2>
-        <p>Best ways to reach me:</p>
-
-        <div class="two-col">
+        
           <div class="card">
             <ul class="contact-list">
               <li><strong>Email:</strong> <a href="mailto:zhuohang@andrew.cmu.edu">zhuohang@andrew.cmu.edu</a></li>
               <li><strong>GitHub:</strong> <a href="#" target="_blank" rel="noreferrer">github.com/KhianKhun</a></li>
-              <li><strong>LinkedIn:</strong> <a href="#" target="_blank" rel="noreferrer">linkedin.com/in/yourname</a></li>
             </ul>
-          </div>
-
-          <div class="card">
-            <h3>Message (optional)</h3>
-            <form id="contactForm" novalidate>
-              <label>
-                Name
-                <input name="name" type="text" autocomplete="name" required />
-              </label>
-
-              <label>
-                Email
-                <input name="email" type="email" autocomplete="email" required />
-              </label>
-
-              <label>
-                Message
-                <textarea name="message" rows="4" required></textarea>
-              </label>
-
-              <p id="formStatus" class="muted" role="status" aria-live="polite"></p>
-
-              <button class="button" type="submit">Validate</button>
-            </form>
-            <p class="fineprint">
-              This form only validates on the client (no backend). You can later upgrade it.
-            </p>
-          </div>
-        </div>
+          </div>  
 
         <footer class="site-footer">
           <p class="muted">
-            © <span id="year"></span> Zhuohang Li. Built for CMU 15-113.
+            © <span id="year"></span> Zhuohang Li. Built for myself and CMU 15-113.
           </p>
           <p class="muted">
             Credits: Replace with image/template attributions if you use any.
@@ -250,6 +243,7 @@
         </footer>
       </div>
     </section>
+
   </main>
 
   <script src="script.js" defer></script>

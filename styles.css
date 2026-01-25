@@ -270,3 +270,33 @@ input, textarea {
   .nav-links a, .nav-links button { text-align: left; }
   .nav-links.open { display: flex; }
 }
+
+.toast {
+  position: fixed;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+
+  max-width: min(720px, calc(100vw - 24px));
+  padding: 10px 14px;
+  border-radius: 999px;
+
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+
+  font-size: 0.95rem;
+  line-height: 1.2;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
