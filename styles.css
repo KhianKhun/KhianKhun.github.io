@@ -135,6 +135,7 @@ h2 { font-size: 1.6rem; margin-bottom: 16px; }
 
 .hero-card .avatar {
   width: 100%;
+  max-width: 360px;
   height: auto;
   border-radius: var(--radius);
   border: 1px solid var(--border);
