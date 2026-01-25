@@ -372,4 +372,11 @@ input, textarea {
     0 4px 10px rgba(0, 0, 0, 0.14);
 }
 
+.hero-card .avatar {
+  cursor: pointer;
+}
+
+.hero-card .avatar:hover {
+  transform: translateY(-2px);
+}
 

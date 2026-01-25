@@ -146,3 +146,20 @@ backToTopBtn.addEventListener("click", () => {
   });
 });
 
+
+// --- Click hero image to toggle between two pictures ---
+const heroImage = document.getElementById("heroImage");
+
+heroImage?.addEventListener("click", () => {
+  const altSrc = heroImage.getAttribute("data-alt-src");
+  if (!altSrc) return;
+
+  const current = heroImage.getAttribute("src") || "";
+
+  // swap
+  heroImage.setAttribute("src", altSrc);
+  heroImage.setAttribute("data-alt-src", current);
+
+  // optional: small toast message if you want to reuse your toast
+  // showToast("Image toggled!");
+});
