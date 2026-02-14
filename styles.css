@@ -380,3 +380,6 @@ input, textarea {
   transform: translateY(-2px);
 }
 
+
+.project-media img.hw4-thumb { max-height: 220px; width: auto; object-fit: contain; }
+
